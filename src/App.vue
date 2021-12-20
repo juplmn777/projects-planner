@@ -5,16 +5,16 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*,
+/* *,
 ::before,
 ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
-  background: #f2f2f2;
+  background: #f1f1f1;
   font-size: 62.5%;
 }
 

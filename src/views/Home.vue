@@ -2,16 +2,19 @@
   <div class="home">
     <div v-if="projects.length">
       <div v-for="project in projects" :key="project.id">
-        <p>{{ project.title }}</p>
+        <SingleProject :project="project"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SingleProject from '@/components/SingleProject.vue';
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    SingleProject
+  },
   data() {
     return {
       projects: [],
@@ -28,6 +31,6 @@ export default {
 
 <style scoped>
 .home {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 </style>
