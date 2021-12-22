@@ -16,6 +16,7 @@
 body {
   background: #f1f1f1;
   font-size: 62.5%;
+  
 }
 
 #app {
@@ -24,6 +25,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 600px;
   margin: 0 auto;
-  color: #222831;
+  color: #30475E;
 }
 </style>
