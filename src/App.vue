@@ -1,7 +1,15 @@
 <template>
+  <TheNavbar />
   <router-view />
 </template>
-
+<script>
+import TheNavbar from '@/components/TheNavbar.vue';
+export default {
+  components: {
+    TheNavbar,
+  },
+};
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -16,7 +24,6 @@
 body {
   background: #f1f1f1;
   font-size: 62.5%;
-  
 }
 
 #app {
@@ -25,6 +32,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 600px;
   margin: 0 auto;
-  color: #30475E;
+  color: #30475e;
 }
 </style>

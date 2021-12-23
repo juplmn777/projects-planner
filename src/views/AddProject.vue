@@ -47,7 +47,7 @@ form {
 
 label {
   display: block;
-  color: #bbb;
+  color: #30475e;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
