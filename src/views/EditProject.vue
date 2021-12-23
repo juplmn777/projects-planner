@@ -1,33 +1,43 @@
 <template>
+  <h1>Edit Project</h1>
   <form @submit.prevent="handleSubmit">
-    <label>Project title:</label>
+    <label>edit project title:</label>
     <input type="text" v-model="title" required />
-    <label>Project details</label>
+    <label>edit project details</label>
     <textarea v-model="details" required></textarea>
-    <button>Add Project</button>
+    <button>Update project</button>
   </form>
 </template>
 
 <script>
 export default {
+  props: ['id'],
   data() {
     return {
-      title: null,
-      details: null,
+      title: '',
+      details: '',
+      uri: 'http://localhost:3000/projects/' + this.id,
     };
+  },
+  mounted() {
+    fetch(this.uri)
+      .then((response) => response.json())
+      .then((data) => {
+        this.title = data.title;
+        this.details = data.details;
+      });
   },
   methods: {
     handleSubmit() {
-      let project = {
-        title: this.title,
-        details: this.details,
-        complete: false,
-      };
-
-      fetch('http://localhost:3000/projects', {
-        method: 'POST',
-        headers: { 'Content-type': 'application/json' },
-        body: JSON.stringify(project),
+      fetch(this.uri, {
+        method: 'PATCH',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          title: this.title,
+          details: this.details,
+        }),
       })
         .then(() => {
           this.$router.push('/');
