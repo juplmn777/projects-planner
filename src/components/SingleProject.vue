@@ -60,7 +60,7 @@ export default {
   border-radius: 5px;
   background: #fff;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #f05454;
+  border-left: 4px solid #ff4b5c;
 }
 h3 {
   cursor: pointer;

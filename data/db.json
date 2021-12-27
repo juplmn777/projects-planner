@@ -1,16 +1,22 @@
 {
   "projects": [
     {
-      "title": "Create a new Portfolio",
-      "details": "A portfolio is very useful to be hired as a Front-End Developer",
-      "complete": false,
-      "id": 3
-    },
-    {
       "title": "Learn VueJS",
       "details": "bla bla bla",
       "complete": false,
       "id": 4
+    },
+    {
+      "title": "Create a new Portfolio",
+      "details": "Bla bla bla bla",
+      "complete": false,
+      "id": 5
+    },
+    {
+      "title": "Learn HTML & CSS",
+      "details": "Basics of front-end dev",
+      "complete": true,
+      "id": 6
     }
   ]
 }
